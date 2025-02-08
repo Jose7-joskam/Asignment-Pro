@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Pro</title>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: blue;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('img src="My Pictures/1708947227755.jpg"') center/cover no-repeat;
+            
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+            image-rendering: auto;
+            
+        }
+
+        .logo {
+            font-size: 44px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin: 20px 0;
+        }
+
+
+        .cta-btn {
+            background: #ff5757;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e8554f;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff5757;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 20px;
+            background: #f8f8f8;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            margin: 20px auto;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .testimonials {
+            margin: 20px auto;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea, form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #ff5757;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #e8554f;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center header text */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers the half screen */
+    z-index: -1; /* Places the video behind other content */
+}
+
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav>
+            <div class="logo">Assignment Pro</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       
+        
+        <div class="hero-content">
+            <h1>Your Solution for Academic Success</h1>
+            <p>Quick, reliable, and affordable assistance for all your assignments.</p>
+            <a href="#contact" class="cta-btn" data-aos="fade-up">Get Started</a>
+        </div>
+        <nav>
+        <div class="Hero">
+            <h1>Walk The Journey with us</h1>
+            <p>Hi there 👋 Are you feeling overwhelmed with assignments and online classes and need timely help at a reasonable price? Whether it’s an essay, research paper, Quiz/Test, or Exam, you’ve come to the right place!</p>
+        
+        </div>
+        </nav>
+        <div>
+            <video autoplay loop muted playsinline id="background-video">
+                <source src="background.mp4">
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 data-aos="slide-right">Our Services</h2>
+        <div class="service-cards">
+            <div class="card" data-aos="slide-right">
+                <i class="fas fa-book"></i>
+                <h3>Essay Writing</h3>
+                <p>High-quality essays delivered on time.</p>
+            </div>
+            <div class="card" data-aos="slide-right">
+                <i class="fas fa-code"></i>
+                <h3>Coding Help</h3>
+                <p>Solutions for programming assignments.</p>
+            </div>
+            <div class="card" data-aos="slide-right">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Research Projects</h3>
+                <p>Detailed and well-structured research papers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 data-aos="fade-up">What Our Clients Say</h2>
+        <div class="testimonial" data-aos="slide-right">
+            <p>"The service was quick and efficient. I scored an A in my assignment!"</p>
+            <h4>- John Doe</h4>
+        </div>
+        <div class="testimonial" data-aos="slide-right">
+            <p>"Highly recommended for anyone struggling with coding tasks."</p>
+            <h4>- Jane Smith</h4>
+        </div>
+        <div class="testimonials" data-aos="slide-right">
+            <p>"I couldn't even believe the services that are offerd here, I was very impressed by the work done. Try and see the results."</p>
+            <h4>- Abdul Rashid</h4>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 data-aos="slide-right">Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email Adress" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Assignment Pro. All rights reserved. Build by Ngure Isaac</p>
+        <p> Joe: <a href="tel:+3175830077">Call Us</a>
+        </p>
+        <div class="social-icons">
+            <a href="https://twitter.com/Assignment Pro" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              
+              <a href="https://wa.me/13175830077" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              
+              <a href="https://www.instagram.com/Assignment Pro" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              
+              <a href="https://www.youtube.com/c/Assignment Pro" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+              
+              <a href="https://www.tiktok.com/@Assignment Pro" target="_blank">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              
+              <a href="https://www.facebook.com/Assignment Pro" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
